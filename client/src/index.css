@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+
+  /* Custom properties for glassmorphic design */
+  --dark-navy: hsl(240, 50%, 8%);
+  --darker-navy: hsl(240, 60%, 11%);
+  --glass-white: hsla(0, 0%, 100%, 0.1);
+  --glass-purple: hsla(261, 83%, 66%, 0.2);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased text-foreground;
+    background: linear-gradient(135deg, var(--dark-navy) 0%, var(--darker-navy) 50%, var(--dark-navy) 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 640px) {
+    .glass-morphism {
+      backdrop-filter: blur(12px);
+    }
+    
+    .animate-slide-in {
+      animation: slideInMobile 0.3s ease-out;
+    }
+    
+    @keyframes slideInMobile {
+      0% { transform: translateY(-10px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  }
+
+  /* Touch improvements for mobile */
+  @media (hover: none) and (pointer: coarse) {
+    .hover\\:scale-105:hover {
+      transform: scale(1.02);
+    }
+    
+    .hover\\:glass-morphism-purple:hover {
+      background: var(--glass-purple);
+      border-color: hsla(261, 83%, 66%, 0.3);
+    }
+  }
+
+  .typewriter-text {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+    border-right: 2px solid transparent;
+  }
+
+  @keyframes typewriter {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }
+
+  @keyframes blink {
+    0%, 50% { border-color: hsl(261, 83%, 66%); }
+    51%, 100% { border-color: transparent; }
+  }
+
+  @keyframes glow {
+    0% { box-shadow: 0 0 5px hsla(261, 83%, 66%, 0.5), 0 0 10px hsla(261, 83%, 66%, 0.3); }
+    100% { box-shadow: 0 0 20px hsla(261, 83%, 66%, 0.8), 0 0 30px hsla(261, 83%, 66%, 0.5); }
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  @keyframes slideIn {
+    0% { transform: translateY(-20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.3s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .glass-morphism {
+    backdrop-filter: blur(16px);
+    background: var(--glass-white);
+    border: 1px solid hsla(0, 0%, 100%, 0.1);
+  }
+
+  .glass-morphism-purple {
+    backdrop-filter: blur(16px);
+    background: var(--glass-purple);
+    border: 1px solid hsla(261, 83%, 66%, 0.3);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(261, 83%, 66%) 0%, hsl(316, 83%, 66%) 50%, hsl(184, 83%, 66%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 4px hsla(261, 83%, 66%, 0.3));
+  }
+
+  .neon-shadow {
+    text-shadow: 0 0 10px hsla(261, 83%, 66%, 0.8), 0 0 20px hsla(261, 83%, 66%, 0.6), 0 0 30px hsla(261, 83%, 66%, 0.4);
+  }
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
