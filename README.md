@@ -104,7 +104,7 @@ A modern web application for tracking and splitting group expenses with intellig
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/raushan728/splitsmart-expense-tracker.git
+git clone https://github.com/raushan728/split-smart-expense-tracker.git
 cd splitsmart-expense-tracker
 ```
 
