@@ -252,6 +252,7 @@ splitsmart-expense-tracker/
 ├── tsconfig.json           # TypeScript configuration
 └── vite.config.ts          # Vite build configuration
 
+```
 ## Development
 
 ### Available Scripts
@@ -305,7 +306,6 @@ CREATE TABLE groups (
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );
-```
 
 #### Members
 ```sql
