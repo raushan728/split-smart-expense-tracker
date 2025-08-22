@@ -392,11 +392,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - **Vite** for fast development and build tooling
 
 ## Contact
+**Raushan kumar**
 
-**Raushan Kumar**
-- Email: [Raushan kumar](raushansinghrajpoot687@gmail.com)
-- GitHub: [@raushan728](https://github.com/raushan728)
-- Project Link: [https://github.com/raushan728/splitsmart-expense-tracker](https://github.com/raushan728/splitsmart-expense-tracker)
+- [Email](mailto:raushansinghrajpoot687@gmail.com)
+- [Twitter](https://x.com/Raushan_090)
 
 ---
 
